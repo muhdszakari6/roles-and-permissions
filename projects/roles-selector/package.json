@@ -1,0 +1,20 @@
+{
+  "name": "roles-selector",
+  "version": "0.0.1",
+  "description": "An Angular Component that allows the user to select multiple roles of interest from a list of specified roles, separated by different permissions name.",
+  "keywords": [
+    "roles and permissons",
+    "dynamic roles selector",
+    "angular permissions"
+  ],
+  "author": "Salim Zakari",
+  "homepage": "https://mat-tree-select-input-demo.netlify.app/",
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0",
+    "@angular/material": "^12.2.1"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}

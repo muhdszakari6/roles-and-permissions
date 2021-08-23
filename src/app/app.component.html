@@ -1,0 +1,37 @@
+  
+  <h1 style="margin-bottom: 10px">
+  NG ROLES SELECTOR
+  </h1>
+  <div style="margin-bottom: 20px" class="">
+    <a href="https://www.npmjs.com/package/mat-tree-select-input" target="_blank">
+      Please Click on this link to read the documentation first!!! Thank you.
+    </a>
+  </div>
+  
+<form class = "grid" (ngSubmit)="onSubmit(testForm)" #testForm="ngForm" [formGroup]="form">
+  <div>
+
+<ng-roles-selector 
+[formArrayName]="'roles'"
+[roleList]="roleList" 
+[form]="form"
+[permittedRoles]  = "permittedRoles"
+[permissions] = "permissions"
+[showTags] = "true"
+>
+
+</ng-roles-selector >
+
+<button type="submit" class="btn" color="primary" mat-flat-button>Submit</button>
+</div>
+
+<div class="section">
+  <h2>Demo Value</h2>
+  <label for="">Value:</label>
+  <p>
+    {{result}}
+  </p>
+</div>
+
+
+</form>
