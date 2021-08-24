@@ -28,7 +28,8 @@ npm i ng-roles-selector
 ```
 Once installed you need to import our main module in your application module:
 ```javascript 
-import { RolesSelectorModule } from 'roles-selector';
+import { RolesSelectorModule } from 'ngx-roles-selector';
+
 
  
 

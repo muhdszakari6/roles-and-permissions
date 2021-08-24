@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RolesSelectorModule } from 'roles-selector';
 import { materials } from './angular-material';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RolesSelectorModule } from 'ngx-roles-selector';
 
 @NgModule({
   declarations: [
