@@ -5,7 +5,6 @@ import { MatTableDataSource } from '@angular/material/table';
 @Component({
   selector: 'ng-roles-selector',
   template: `
-    <div class="table-wrapper" style="width: 100%;">
         <div *ngIf="(tags.length != 0) && showTags"  class="custom-label">Selected Roles</div>
         <mat-chip-list  *ngIf="(tags.length != 0) && showTags"  #chipList>
             <mat-chip *ngFor="let tag of tags"
@@ -23,6 +22,8 @@ import { MatTableDataSource } from '@angular/material/table';
             </mat-chip>
             
         </mat-chip-list>
+    <div class="table-wrapper" style="width: 100%;">
+
 
         <table *ngIf="(roles.length !== 0)" formArrayName="roles" style = "width: 100%" mat-table class="full-width custom-pms-table"
             [dataSource]="innerlistData"  aria-label="Elements">
@@ -80,7 +81,7 @@ td.mat-cell{
   border-right: 1px solid #e0e0e0;
 }
 .table-wrapper{
-    height: 40vh;
+    /* height: 70vh; */
     overflow-y: auto;
 }
 

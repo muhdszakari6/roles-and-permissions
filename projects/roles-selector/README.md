@@ -15,7 +15,7 @@ An Angular Component that allows the user to select multiple roles of interest f
 * Add and remove roles and permissions via checkboxes
 
 ## Example
-![alt text](https://drive.google.com/file/d/1uDCId7sxgSi5rWe33s1wpjb636pfjeB6/view?usp=sharing)
+![Roles Selector Example](https://drive.google.com/file/d/1uDCId7sxgSi5rWe33s1wpjb636pfjeB6/view?usp=sharing)
 
 ## Demo
  [Demo Application](https://mat-tree-select-input-demo.netlify.app/)
