@@ -1,6 +1,6 @@
 {
-  "name": "roles-selector",
-  "version": "0.0.1",
+  "name": "ngx-roles-selector",
+  "version": "0.0.2",
   "description": "An Angular Component that allows the user to select multiple roles of interest from a list of specified roles, separated by different permissions name.",
   "keywords": [
     "roles and permissons",
@@ -8,7 +8,7 @@
     "angular permissions"
   ],
   "author": "Salim Zakari",
-  "homepage": "https://mat-tree-select-input-demo.netlify.app/",
+  "homepage": "https://ngx-roles-selector.netlify.app/",
   "peerDependencies": {
     "@angular/common": "^12.1.0",
     "@angular/core": "^12.1.0",

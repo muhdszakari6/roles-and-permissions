@@ -3,7 +3,7 @@ import { ControlContainer, FormGroupDirective, FormBuilder, FormGroup, FormContr
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'ng-roles-selector',
+  selector: 'ngx-roles-selector',
   template: `
         <div *ngIf="(tags.length != 0) && showTags"  class="custom-label">Selected Roles</div>
         <mat-chip-list  *ngIf="(tags.length != 0) && showTags"  #chipList>

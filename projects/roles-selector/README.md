@@ -1,4 +1,4 @@
-# MatTreeSelectInput
+# Roles Selector
 
 An Angular Component that allows the user to select multiple roles of interest from a list of specified roles, separated by different permissions name.
 
@@ -15,16 +15,17 @@ An Angular Component that allows the user to select multiple roles of interest f
 * Add and remove roles and permissions via checkboxes
 
 ## Example
-![Roles Selector Example](https://drive.google.com/file/d/1uDCId7sxgSi5rWe33s1wpjb636pfjeB6/view?usp=sharing)
+![Roles Selector Example](https://salimzak.blob.core.windows.net/pictures/Screenshot%20(66).png)
 
 ## Demo
- [Demo Application](https://mat-tree-select-input-demo.netlify.app/)
+ [Demo Application](https://ngx-roles-selector.netlify.app/)
 
 ## Installation
 After installing the above dependencies. Install ng-roles-selector via.
 ```bash 
-npm i ng-roles-selector ```
+npm i ng-roles-selector 
 
+```
 Once installed you need to import our main module in your application module:
 ```javascript 
 import { RolesSelectorModule } from 'roles-selector';
@@ -59,7 +60,7 @@ ng-roles-selector.
             ....
         </form>
 ```
-Creating your form in the component ts file. 
+Create your form in the component ts file. 
 Inside the constructor of your component.ts file create a form with empty roles formarray via 
 ```typescript
   constructor(

@@ -4,7 +4,7 @@
   NG ROLES SELECTOR
   </h1>
   <div style="margin-bottom: 20px" class="">
-    <a href="https://www.npmjs.com/package/mat-tree-select-input" target="_blank">
+    <a href="https://www.npmjs.com/package/ngx-roles-selector" target="_blank">
       Please Click on this link to read the documentation first!!! Thank you.
     </a>
   </div>
@@ -12,7 +12,7 @@
 <form class = "grid" (ngSubmit)="onSubmit(testForm)" #testForm="ngForm" [formGroup]="form">
   <div>
 
-<ng-roles-selector 
+<ngx-roles-selector 
 [formArrayName]="'roles'"
 [roleList]="roleList" 
 [form]="form"
@@ -21,7 +21,7 @@
 [showTags] = "true"
 >
 
-</ng-roles-selector >
+</ngx-roles-selector >
 
 <button type="submit" class="btn" color="primary" mat-flat-button>Submit</button>
 </div>
