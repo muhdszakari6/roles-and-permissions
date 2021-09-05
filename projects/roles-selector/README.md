@@ -21,9 +21,9 @@ An Angular Component that allows the user to select multiple roles of interest f
  [Demo Application](https://ngx-roles-selector.netlify.app/)
 
 ## Installation
-After installing the above dependencies. Install ng-roles-selector via.
+After installing the above dependencies. Install ngx-roles-selector via.
 ```bash 
-npm i ng-roles-selector 
+npm i ngx-roles-selector 
 
 ```
 Once installed you need to import our main module in your application module:
@@ -44,20 +44,20 @@ export class AppModule {
 ```
 
 ## Usage
-ng-roles-selector. 
+ngx-roles-selector. 
 ```html 
         <form  [formGroup]="form">
             ....
-           <ng-roles-selector 
+           <ngx-roles-selector 
                 [formArrayName]="'roles'"
-                [roleList]="listData" 
+                [roleList]="roleList" 
                 [form]="form"
                 [permittedRoles]  = "permittedRoles"
                 [permissions] = "permissions"
                 [showTags] = "true"
             >
 
-            </ng-roles-selector >
+            </ngx-roles-selector >
             ....
         </form>
 ```
