@@ -1,6 +1,6 @@
 {
   "name": "ngx-roles-selector",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "description": "An Angular Component that allows the user to select multiple roles of interest from a list of specified roles, separated by different permissions name.",
   "keywords": [
     "roles and permissons",

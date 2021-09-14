@@ -115,7 +115,8 @@ export class RolesSelectorComponent implements OnInit {
   @Input() permittedRoles: any
   @Input() showTags = false
 
-  @Input() permissions = []
+  @Input() permissions: string[] = ['']
+
   displayedColumns = ['name', 'selectAll', ...this.permissions]
 
   innerlistData = new MatTableDataSource(this.roleList)
@@ -322,7 +323,6 @@ export class RolesSelectorComponent implements OnInit {
       }
 
     })
-    console.log(this.roleList)
 
     //clear form array before pushing new elements
     //Removing this might cause trouble when user updates twice before leaving the page

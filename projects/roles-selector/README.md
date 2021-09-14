@@ -107,7 +107,7 @@ Declare and initialize roleList property sample:
 
 Declare and initialize permissions property, sample:
 ```typescript 
- permissions = ['read', 'write', 'create', 'delete',"export","import"]
+ permissions: string[] = ['read', 'write', 'create', 'delete',"export","import"]
 ```
 Declare and initialize existing roles and permissions if available, sample: 
 ```typescript 
