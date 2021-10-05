@@ -7,6 +7,8 @@ import { materials } from './angular-material';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RolesSelectorModule } from 'ngx-roles-selector';
+import { MatTreeSelectInputModule } from 'mat-tree-select-input';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { RolesSelectorModule } from 'ngx-roles-selector';
     RolesSelectorModule,
     CommonModule,
     ReactiveFormsModule,
+    MatTreeSelectInputModule,
     FormsModule,
     ...materials
   ],

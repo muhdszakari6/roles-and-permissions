@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { TreeData } from 'mat-tree-select-input';
 
 
 @Component({
@@ -11,7 +12,50 @@ export class AppComponent {
   title = 'roles-and-permissions';
   form: FormGroup;
   result: any
+  
+  // options: TreeData[] = [
+  //   {
+  //     name: 'Parent',
+  //     value: 'Parent',
+  //     children: [
+  //       {
+  //         name: 'Child',
+  //         value: 'Child',
+  //         children: [
+  //           {
+  //             name: 'Child',
+  //             value: 'Child',
+  //             children: []
 
+  //           }
+  //         ]
+  //       }
+  //     ]
+  //   },
+
+  //   {
+  //     name: 'Grand Parent',
+  //     value: 'Parent',
+  //     children: [
+  //       {
+  //         name: 'Child',
+  //         value: 'Child',
+  //         children: [
+  //           {
+  //             name: 'Child',
+  //             value: 'Child',
+  //             children: []
+
+
+  //           }
+  //         ]
+  //       }
+  //     ]
+  //   },
+
+  // ]
+
+  value: any = ''
   
   constructor(
     private fb: FormBuilder
@@ -65,6 +109,9 @@ export class AppComponent {
 
   get roles() {
     return this.form.get('roles') as FormArray;
+  }
+  onSelectionChanged(){
+    console.log(this.value)
   }
 
   onSubmit(form: any){
