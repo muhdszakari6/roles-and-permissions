@@ -22,7 +22,6 @@
     "@angular/router": "~12.1.1",
     "mat-tree-select-input": "^1.1.5",
     "ngx-roles-selector": "0.0.2",
-    "roles-selector": "0.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
