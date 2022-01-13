@@ -40,7 +40,7 @@ import { MatTableDataSource } from '@angular/material/table';
                     <b>Select All</b>
                 </th>
                 <td mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
-                    <mat-checkbox color='primary' (change)="handleSelectAll($event, index , roleAtIndex(index).value)"
+                    <mat-checkbox  color='primary' (change)="handleSelectAll($event, index , roleAtIndex(index).value)"
                         formControlName='selectAll' style="margin: 10px; "></mat-checkbox>
                 </td>
             </ng-container>
@@ -54,7 +54,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
                 <td mat-cell *matCellDef="let row; let index = index" style="text-align: center;"
                     [formGroupName]="index">
-                    <mat-checkbox color='primary' (change)="handleSelectRole($event, index , roleAtIndex(index).value)"
+                    <mat-checkbox   color='primary' (change)="handleSelectRole($event, index , roleAtIndex(index).value)"
                         [formControlName]='item' style="margin: 10px;"></mat-checkbox>
                 </td>
 
@@ -114,6 +114,7 @@ export class RolesSelectorComponent implements OnInit {
   @Input() form: any
   @Input() permittedRoles: any
   @Input() showTags = false
+  @Input() disabled = false
 
   @Input() permissions: string[] = ['']
 
@@ -333,7 +334,7 @@ export class RolesSelectorComponent implements OnInit {
 
       let o:any = {}
       this.permissions.forEach(permission => {
-        o[permission] = new FormControl(element[permission]);
+        o[permission] = new FormControl( {value: element[permission],disabled: this.disabled} );
       });
 
       let selectAll = true;
@@ -343,11 +344,9 @@ export class RolesSelectorComponent implements OnInit {
         }
       }
 
-      o['selectAll'] = new FormControl(selectAll)
+      o['selectAll'] = new FormControl({value: selectAll,disabled: this.disabled})
 
       this.roles.push(
-
-
         this.fb.group({
           name: [element.name, Validators.required],
           ...o

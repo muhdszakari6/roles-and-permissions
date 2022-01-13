@@ -15,10 +15,13 @@ An Angular Component that allows the user to select multiple roles of interest f
 * Add and remove roles and permissions via checkboxes
 
 ## Example
-![Roles Selector Example](https://salimzak.blob.core.windows.net/pictures/Screenshot%20(66).png)
+![Roles Selector Example](https://res.cloudinary.com/muhdsalim/image/upload/v1633869826/Screenshot_66_gbtfkm.png)
 
 ## Demo
  [Demo Application](https://ngx-roles-selector.netlify.app/)
+
+ ## Note
+You need to have @angular/material installed in your project, as it is a Peer Dependency.
 
 ## Installation
 After installing the above dependencies. Install ngx-roles-selector via.
@@ -133,3 +136,19 @@ Finnaly create a get method to return roles as formarray, sample:
   }
 
 ```
+To disable selection add you can pass a boolean to the disabled prop. For example:
+```html
+            <ngx-roles-selector 
+                [formArrayName]="'roles'"
+                [roleList]="roleList" 
+                [form]="form"
+                [permittedRoles]  = "permittedRoles"
+                [permissions] = "permissions"
+                [showTags] = "true"
+                [disabled] = "true"
+            >
+
+            </ngx-roles-selector >
+
+```
+
