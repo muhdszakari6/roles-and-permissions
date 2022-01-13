@@ -8,16 +8,16 @@
       Please Click on this link to read the documentation first!!! Thank you.
     </a>
   </div>
-  
+
 <form class = "grid" (ngSubmit)="onSubmit(testForm)" #testForm="ngForm" [formGroup]="form">
   <div>
 
-<ngx-roles-selector 
+<ngx-roles-selector
 [formArrayName]="'roles'"
-[roleList]="roleList" 
+[roleList]="roleList"
 [form]="form"
 [permittedRoles]  = "permittedRoles"
-[disabled] = "true"
+[disabled] = "false"
 [permissions] = "permissions"
 [showTags] = "true"
 >
@@ -34,14 +34,14 @@
     {{result}}
   </p>
 </div>
-<!-- 
-<ngx-mat-tree-select-input-ngmodel 
+<!--
+<ngx-mat-tree-select-input-ngmodel
 (selectionChanged)="onSelectionChanged()"
 [(select)]="value"
 [options]="options"
 [heading] = "'Sub Categories of'"
 [canSelectParentNode] = "false"
-[placeholder]="'Select Category'" 
+[placeholder]="'Select Category'"
 >
 </ngx-mat-tree-select-input-ngmodel> -->
 
