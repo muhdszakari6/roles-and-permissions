@@ -7,13 +7,14 @@ import { materials } from './angular-material';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatTreeSelectInputModule } from 'mat-tree-select-input';
+import { RolesSelectorModule } from 'ngx-roles-selector';
 
-import { RolesSelectorModule } from 'projects/roles-selector/src/public-api';
+
 
 @NgModule({
   declarations: [
     AppComponent
-  ], 
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
