@@ -1,0 +1,54 @@
+ <div *ngIf="(tags.length != 0) && showTags"  class="custom-label">Selected Roles</div>
+        <mat-chip-list  *ngIf="(tags.length != 0) && showTags"  #chipList>
+            <mat-chip *ngFor="let tag of tags"
+               >
+                {{tag.name}}
+                <mat-icon
+                    color="primary"
+                    [matBadge]="tag.count"
+                    matBadgePosition="above after"
+                    >
+                        icon
+                </mat-icon>
+            </mat-chip>
+        </mat-chip-list>
+    <div class="table-wrapper" style="width: 100%;">
+        <table *ngIf="(roles.length !== 0)" formArrayName="roles" style = "width: 100%" mat-table class="full-width custom-pms-table"
+            [dataSource]="innerlistData"  aria-label="Elements">
+
+            <ng-container matColumnDef="name" sticky>
+                <th mat-header-cell *matHeaderCellDef> <b></b> </th>
+                <td mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+                    {{row.name}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="selectAll">
+                <th mat-header-cell *matHeaderCellDef>
+                    <b>Select All</b>
+                </th>
+                <td mat-cell *matCellDef="let row; let index = index" [formGroupName]="index">
+                    <mat-checkbox  color='primary' (change)="handleSelectAll($event, index , roleAtIndex(index).value)"
+                        formControlName='selectAll' style="margin: 10px; "></mat-checkbox>
+                </td>
+            </ng-container>
+
+
+            <ng-container *ngFor="let item of permissions;let i=index" [matColumnDef]="item">
+
+                <th mat-header-cell *matHeaderCellDef>
+                    {{item}}
+                </th>
+
+                <td mat-cell *matCellDef="let row; let index = index" style="text-align: center;"
+                    [formGroupName]="index">
+                    <mat-checkbox   color='primary' (change)="handleSelectRole($event, index , roleAtIndex(index).value)"
+                        [formControlName]='item' style="margin: 10px;"></mat-checkbox>
+                </td>
+
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>

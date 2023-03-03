@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RolesSelectorComponent } from './roles-selector.component';
+import { RolesSelectorComponent } from '../components/roles-selector.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';

@@ -3,7 +3,7 @@
 An Angular Component that allows the user to select multiple roles of interest from a list of specified roles, separated by different permissions name.
 
 ## Dependencies
-*  [Angular](https://angular.io/)
+* [Angular](https://angular.io/)
 * [Angular material](https://material.angular.io/)
 
 
