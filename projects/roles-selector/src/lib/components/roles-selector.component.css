@@ -21,3 +21,7 @@ th{
 mat-chip-list{
     margin: 20px;
 }
+.chip{
+    display: flex;
+    align-items: center;
+}

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { UntypedFormArray, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
-import { TreeData } from 'mat-tree-select-input';
 
 
 @Component({
@@ -12,59 +11,16 @@ export class AppComponent {
   title = 'roles-and-permissions';
   form: UntypedFormGroup;
   result: any
-  
-  // options: TreeData[] = [
-  //   {
-  //     name: 'Parent',
-  //     value: 'Parent',
-  //     children: [
-  //       {
-  //         name: 'Child',
-  //         value: 'Child',
-  //         children: [
-  //           {
-  //             name: 'Child',
-  //             value: 'Child',
-  //             children: []
-
-  //           }
-  //         ]
-  //       }
-  //     ]
-  //   },
-
-  //   {
-  //     name: 'Grand Parent',
-  //     value: 'Parent',
-  //     children: [
-  //       {
-  //         name: 'Child',
-  //         value: 'Child',
-  //         children: [
-  //           {
-  //             name: 'Child',
-  //             value: 'Child',
-  //             children: []
-
-
-  //           }
-  //         ]
-  //       }
-  //     ]
-  //   },
-
-  // ]
-
   value: any = ''
-  
+
   constructor(
     private fb: UntypedFormBuilder
   ) {
 
     this.form = this.fb.group({
-    
+
       roles: this.fb.array([])
-      
+
     })
   }
 
@@ -99,22 +55,21 @@ export class AppComponent {
       write: true,
       create: true,
       delete: true,
-      export: true, 
-      import: true, 
+      export: true,
+      import: true,
 
     },
 
   ]
-  permissions = ['read', 'write', 'create', 'delete',"export","import"]
+  permissions = ['read', 'write', 'create', 'delete', "export", "import"]
 
   get roles() {
     return this.form.get('roles') as UntypedFormArray;
   }
-  onSelectionChanged(){
-    console.log(this.value)
+  onSelectionChanged() {
   }
 
-  onSubmit(form: any){
+  onSubmit(form: any) {
     this.result = JSON.stringify(form.value.roles)
   }
 }
