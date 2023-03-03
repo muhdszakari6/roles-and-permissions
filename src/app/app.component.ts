@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { TreeData } from 'mat-tree-select-input';
 
 
@@ -10,7 +10,7 @@ import { TreeData } from 'mat-tree-select-input';
 })
 export class AppComponent {
   title = 'roles-and-permissions';
-  form: FormGroup;
+  form: UntypedFormGroup;
   result: any
   
   // options: TreeData[] = [
@@ -58,7 +58,7 @@ export class AppComponent {
   value: any = ''
   
   constructor(
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) {
 
     this.form = this.fb.group({
@@ -108,7 +108,7 @@ export class AppComponent {
   permissions = ['read', 'write', 'create', 'delete',"export","import"]
 
   get roles() {
-    return this.form.get('roles') as FormArray;
+    return this.form.get('roles') as UntypedFormArray;
   }
   onSelectionChanged(){
     console.log(this.value)

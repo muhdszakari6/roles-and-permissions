@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ControlContainer, FormGroupDirective, FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ControlContainer, FormGroupDirective, UntypedFormBuilder, UntypedFormGroup, UntypedFormControl, Validators, UntypedFormArray } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -19,7 +19,7 @@ export class RolesSelectorComponent implements OnInit {
 
 
   constructor(
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) { }
 
   @Input() formArrayName = ''
@@ -36,7 +36,7 @@ export class RolesSelectorComponent implements OnInit {
   innerlistData = new MatTableDataSource(this.roleList)
 
   roleAtIndex(i: number) {
-    return this.roles.at(i) as FormGroup;
+    return this.roles.at(i) as UntypedFormGroup;
   }
 
   handleSelectAll(event: any, index: number, permission:any) {
@@ -204,7 +204,7 @@ export class RolesSelectorComponent implements OnInit {
 
       let o:any = {}
       this.permissions.forEach(permission => {
-        o[permission] = new FormControl( {value: element[permission],disabled: this.disabled} );
+        o[permission] = new UntypedFormControl( {value: element[permission],disabled: this.disabled} );
       });
 
       let selectAll = true;
@@ -214,7 +214,7 @@ export class RolesSelectorComponent implements OnInit {
         }
       }
 
-      o['selectAll'] = new FormControl({value: selectAll,disabled: this.disabled})
+      o['selectAll'] = new UntypedFormControl({value: selectAll,disabled: this.disabled})
 
       this.roles.push(
         this.fb.group({
@@ -269,7 +269,7 @@ export class RolesSelectorComponent implements OnInit {
   }
 
   get roles() {
-    return this.form.get('roles') as FormArray;
+    return this.form.get('roles') as UntypedFormArray;
   }
 
 }
